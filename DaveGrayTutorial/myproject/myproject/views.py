@@ -9,3 +9,6 @@ def homepage(request):
 def about(request):
     #return HttpResponse("My about page")
     return render(request,'about.html')
+
+def credits(request):
+    return render(request,'credits.html')
