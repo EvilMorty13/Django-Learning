@@ -81,3 +81,14 @@ py manage.py makemigrations
 py manage.py migrate
 ```
 
+## Add models to ``admin.py``
+```
+admin.site.register(model_name)
+```
+
+## Create Super User
+
+```
+py manage.py createsuperuser
+```
+
