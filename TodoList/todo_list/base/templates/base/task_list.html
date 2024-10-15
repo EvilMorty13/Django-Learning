@@ -1,9 +1,17 @@
+{% extends "base/main.html" %}
+
+{% block content %}
+
+
 {% if request.user.is_authenticated %}
-    <p>{{ request.user }}</p>
+<div class="user-logout">
+    <p>Current User: {{ request.user }}</p>
     <form method="POST" action="{% url 'logout' %}">
         {% csrf_token %}
         <button type="submit">Logout</button>
     </form>
+</div>
+
 {% else %}
     <a href="{% url 'login' %}">Login</a>
 {% endif %}
@@ -11,6 +19,13 @@
 
 <h1>My to do list</h1>
 <a href="{% url 'task-create' %}">Add task</a>
+
+<form method="GET">
+    <input type="text" name='search-area' value="{{search_input}}">
+    <input type="submit" value="Search">
+</form>
+
+
 <table>
     <tr>
        <th>Item</th>
@@ -28,3 +43,5 @@
     {% endfor %}
 
 </table>
+{% endblock content %}
+
