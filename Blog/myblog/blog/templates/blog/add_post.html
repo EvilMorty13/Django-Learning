@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}
+Add Post
+{% endblock%}
+
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/add_post.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <h1>Add a new post</h1>
+    <div class='maincontainer'>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}

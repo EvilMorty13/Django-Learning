@@ -1,11 +1,17 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
-{%block title%}Post Detils{% endblock %}
+{% block title %}
+Post Detail
+{% endblock%}
 
-{% block content %}
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+{% endblock %}
 
+
+{%block content%}
 <h1>{{post.title}}</h1>
-<p>{{post.content}}</p>
+<p class="content">{{post.content}}</p>
 <p>Posted by {{ post.author }} on {{ post.created_at }}</p>
-
 {% endblock %}

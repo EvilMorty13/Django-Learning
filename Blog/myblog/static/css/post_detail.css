@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 252, 252);
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #000000;
+}
+
+.content{
+    margin-top: 100px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,24 +1,27 @@
 {% extends "blog/base.html" %}
-
+{% load static %}
 
 {% block title %}
 Homepage
 {% endblock%}
 
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
 
 {% block content %}
-<div class="my-4">
-    <h1 class="text-center">My Blog</h1>
-    {% for post in posts %}
-        <div class="card mb-3">
-            <div class="card-body">
-                <h2>
-                    <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
-                </h2>
+<h1 class="text-center">My Blog</h1>
+<div class='add'>
+    <a href="{% url 'add-post'%}">➕</a>  
+</div>
+    <div class="maincontainer">
+        {% for post in posts %}
+        <div class="subcontainer">
+                <h2> <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
                 <p class="card-text">{{ post.content|slice:300 }}...</p>
                 <p class="text-muted">Posted by {{ post.author }} on {{ post.created_at }}</p>
-            </div>
         </div>
     {% endfor %}
-</div>
+    </div>
 {% endblock %}

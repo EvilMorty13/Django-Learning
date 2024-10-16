@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 3, 3);
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.add{
+    margin-right: 20px;
+    text-align: right;
+}
+
+.add a{
+    text-decoration: none;
+}
+
+/* Main container for the posts */
+.maincontainer {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Subcontainer for each post (card) */
+.subcontainer {
+    width: 100%;
+    max-width: 500px; /* Max width to prevent the card from becoming too wide */
+    height: 300px; /* Fixed height to ensure uniform card size */
+    border-radius: 20px;
+    border: 10px solid #000000;
+    position: relative;
+    padding: 20px;
+    background-color: #fff; /* White background for cards */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Added shadow for card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect for the cards */
+.subcontainer:hover {
+    transform: translateY(-5px); /* Slight hover lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Title in each post */
+.subcontainer h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevents title from wrapping */
+    overflow: hidden; /* Hides overflowing title */
+    text-overflow: ellipsis; /* Add ellipsis if title overflows */
+}
+
+/* Links in the post title */
+.subcontainer h2 a {
+    text-decoration: none;
+    color: #000000; /* Blue color for links */
+    transition: color 0.3s ease;
+}
+
+/* Change link color on hover */
+.subcontainer h2 a:hover {
+    color: #41060f;
+}
+
+/* Post content (with slice effect to show the first 300 characters) */
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis if content is too long */
+}
+
+/* Author and date section */
+.text-muted {
+    font-size: 0.875rem;
+    color: #999;
+    text-align: left;
+    margin-top: auto; /* Align text at the bottom of the card */
+    white-space: normal; /* Allow author/date to wrap normally */
+}
+
+/* Responsiveness: Make sure the cards are responsive */
+@media (max-width: 1024px) {
+    .subcontainer {
+        width: 48%; /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .subcontainer {
+        width: 100%; /* 1 card per row on smaller screens */
+    }
+}
