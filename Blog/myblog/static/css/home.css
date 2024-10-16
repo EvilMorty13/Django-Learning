@@ -12,10 +12,65 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+/* Styling for the nav container */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    gap: 15px; /* Adds space between the icons */
+}
+
+/* Styling for the icons and buttons */
+.nav-icon {
+    font-size: 42px;  /* Set the size of all icons */
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for icons */
+.nav-icon:hover {
+    background-color: #e2e6ea;
+    border-radius: 50%;
+}
+
+/* Styling the form */
+.nav-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* Ensures space between logout button and add-post link */
+}
+
+/* Styling for the logout button */
+.nav-form button {
+    background: none;
+    border: none;
+    font-size: 24px;  /* Ensures the button matches the size of the icons */
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the logout button */
+.nav-form button:hover {
+    background-color: #e2e6ea;
+    border-radius: 50%;
+}
+
+
+
 h1 {
     color: #000000;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.cu {
+    text-align: center;
 }
 
 .add{

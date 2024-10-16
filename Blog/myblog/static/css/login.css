@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'lemon';
+    src: url(fonts/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+    font-family: 'coffee';
+    src: url(fonts/Coffee\ Soda.otf);
+}
+
+@font-face {
+    font-family: 'times';
+    src: url(fonts/TIMESS__.ttf);
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid rgb(86, 14, 86); /* Adding border width and style */
+    box-shadow: 100px 100px 100px rgba(255, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'lemon';
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'coffee';
+}
+
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: 'times';
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(138, 35, 135, 1) 0%, rgba(234, 35, 149, 1) 100%);
+    background-size: 200% 100%; /* Set initial background size */
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-position 0.5s ease, box-shadow 0.3s ease; /* Animate background-position */
+    font-family: 'coffee';
+}
+
+.login-btn:hover {
+    background-position: -100% 0; /* Shift the background gradient to create a smooth transition */
+    box-shadow: 0 4px 12px rgba(234, 35, 149, 0.3); 
+}
+
