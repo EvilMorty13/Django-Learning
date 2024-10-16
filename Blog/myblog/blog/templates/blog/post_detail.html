@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{%block title%}Post Detils{% endblock %}
+
+{% block content %}
+
+<h1>{{post.title}}</h1>
+<p>{{post.content}}</p>
+<p>Posted by {{ post.author }} on {{ post.created_at }}</p>
+
+{% endblock %}
