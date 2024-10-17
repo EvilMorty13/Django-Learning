@@ -1,11 +1,12 @@
 from django.shortcuts import render,redirect
-from .models import Post
-from .forms import PostForm
+from .models import Post,Profile
+from .forms import PostForm,ProfileUpdateForm
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,get_user
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User 
 # Create your views here.
 
 
@@ -47,3 +48,28 @@ def register(request):
     
     return render(request, 'blog/register.html', {'form': form}) 
 
+
+
+def profile_view(request, username):
+    user = get_object_or_404(User, username=username)
+    profile = Profile.objects.get(user=user)
+    return render(request, 'blog/profile.html', {'profile': profile})
+
+
+@login_required
+def profile_update(request, username):
+    # Ensure the user can only update their own profile
+    if request.user.username != username:
+        return redirect('profile', username=request.user.username)
+
+    user = get_object_or_404(User, username=username)
+
+    if request.method == 'POST':
+        form = ProfileUpdateForm(request.POST, instance=user.profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile', username=user.username)
+    else:
+        form = ProfileUpdateForm(instance=user.profile)
+
+    return render(request, 'blog/profile_update.html', {'form': form, 'user': user})

@@ -11,14 +11,15 @@ Add Post
 
 
 {% block content %}
-    <h1>Add a new post</h1>
+
     <div class='maincontainer'>
+        <h1>Add a new post</h1>
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">
                 {{ form.as_p }}
             </div>
-            <button type="submit">Submit</button>
+            <button class='btn' type="submit">Submit</button>
         </form>
     </div>
 

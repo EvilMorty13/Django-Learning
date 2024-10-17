@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'lemon';
+    src: url(fonts/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+    font-family: 'coffee';
+    src: url(fonts/Coffee\ Soda.otf);
+}
+
+@font-face {
+    font-family: 'tango';
+    src: url(fonts/TangoSans.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +21,16 @@
 }
 
 h1 {
+    font-family: 'lemon';
     margin-top: 50px;
     text-align: center;
     color: #000000;
 }
 
 .content{
+    font-family: 'tango';
     margin-top: 100px;
+    margin-bottom: 10px;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }

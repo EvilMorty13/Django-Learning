@@ -12,11 +12,10 @@
     font-family: 'tango';
     src: url(fonts/TangoSans.ttf);
 }
-
-
 body{
     background-color: aliceblue;
 }
+
 
 
 .maincontainer {
@@ -30,30 +29,19 @@ body{
     box-shadow: 100px 100px 100px rgba(255, 0, 0, 0.1);
     text-align: center;
 }
+
+
+.subcontainer{
+    font-family: 'tango';
+    text-align: left;
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px solid rgb(86, 14, 86); /* Adding border width and style */
+}
+
 .maincontainer h1{
     font-family: 'lemon';
 }
-
-label {
-    font-family: 'tango';
-    font-size: 1.2em;
-    color: rgb(0, 0, 0);  
-    margin-bottom: 5px;  
-    display: block;  
-    text-align: left; 
-    margin-top: 15px;  
-}
-
-form input,
-form textarea {
-    font-family: 'tango';
-    width: 90%;
-    padding: 10px;
-    border-radius: 25px;
-    border: 2px solid rgb(0, 0, 0);
-    
-}
-
 
 .btn{
     font-family: 'tango';
@@ -62,7 +50,7 @@ form textarea {
     padding: 10px;
     border-radius: 25px;
     margin: 10px;
-    border: 2px solid rgb(0, 0, 0); 
+    border: 2px solid rgb(86, 14, 86); 
 }
 
 .btn:hover{

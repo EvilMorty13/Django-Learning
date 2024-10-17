@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'lemon';
+    src: url(fonts/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+    font-family: 'coffee';
+    src: url(fonts/Coffee\ Soda.otf);
+}
+
+@font-face {
+    font-family: 'tango';
+    src: url(fonts/TangoSans.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -64,12 +78,14 @@ body {
 
 
 h1 {
+    font-family: 'lemon';
     color: #000000;
     text-align: center;
     margin-bottom: 40px;
 }
 
 .cu {
+    font-family: 'tango';
     text-align: center;
 }
 
@@ -84,6 +100,7 @@ h1 {
 
 /* Main container for the posts */
 .maincontainer {
+    font-family: 'tango';
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;

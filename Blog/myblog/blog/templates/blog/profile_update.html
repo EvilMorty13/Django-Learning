@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}Edit Profile{% endblock %}
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/profile_update.css' %}">
+{% endblock %}
+{% block content %}
+    <div class = 'maincontainer'>
+        <h1>Edit Your Profile</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn" type="submit">Save Changes</button>
+        </form>
+    </div>
+{% endblock %}

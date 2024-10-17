@@ -1,12 +1,22 @@
-{% extends 'blog/base.html' %}
+{% extends "blog/base.html" %}
+{% load static %}
 
-{% block title %}Register{% endblock %}
+{% block title %}
+Register
+{% endblock%}
 
-{% block content %}
-<h1>Register</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}  
-    <button type="submit">Register</button>
-</form>
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content%}
+<div class="maincontainer">
+    <h1>Register</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  
+        <button class="btn" type="submit">Register</button>
+    </form>
+</div>
+
 {% endblock %}

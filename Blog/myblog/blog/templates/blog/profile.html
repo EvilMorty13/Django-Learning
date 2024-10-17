@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block link%}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class = 'maincontainer'>
+        <h1>Profile of {{ profile.user}}</h1>
+        <p class='subcontainer'>First Name : {{ profile.first_name }}</p>
+        <p class='subcontainer'>Last Name : {{ profile.last_name }}</p>
+        <p class='subcontainer'>Country : {{ profile.country }}</p>
+        <p class='subcontainer'>Mobile No : {{ profile.mobile_no }}</p>
+    
+        {% if user == profile.user %}
+        <a href="{% url 'profile-update' profile.user %}" class="btn">Edit Profile</a>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

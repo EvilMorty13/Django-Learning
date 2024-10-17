@@ -22,6 +22,7 @@ Homepage
             <button type="submit" class="nav-icon">👋🏼</button>   
         </form>
             <a href="{% url 'add-post' %}" class="nav-icon">➕</a>
+            <a href="{% url 'profile' us%}" class="nav-icon">🧑🏼</a>
         {% else %}
             <a href="{% url 'login' %}" class="nav-icon">🚪</a>
             <a href="{% url 'register' %}" class="nav-icon">🪪</a>
@@ -34,7 +35,9 @@ Homepage
         <div class="subcontainer">
                 <h2> <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
                 <p class="card-text">{{ post.content|slice:300 }}...</p>
-                <p class="text-muted">Posted by {{ post.author }} on {{ post.created_at }}</p>
+                <p class="text-muted">Posted by
+                    <a href="{% url 'profile' post.author%}">{{post.author}}</a> 
+                    on {{ post.created_at }}</p>
         </div>
     {% endfor %}
     </div>
