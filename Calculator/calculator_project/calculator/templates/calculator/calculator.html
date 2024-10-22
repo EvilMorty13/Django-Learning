@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Django Calculator App</title>
+</head>
+<body>
+    <div class='maincontainer'>
+        <h1>Calculator</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class='subcontainer'>
+                <label for="num1">First Number</label>
+                <input type="number" name="num1" step="any" required><br><br>
+            </div>
+            <div class='subcontainer'>
+                <label for="num2">Second Number</label>
+                <input type="number" name="num2" step="any" required><br><br>
+            </div>
+    
+            <label for="operation">Operation</label>
+            <select name="operation">
+                <option value="Add">Add</option>
+                <option value="Subtract">Subtract</option>
+                <option value="Multiply">Multiply</option>
+                <option value="Divide">Divide</option>
+                <option value="Mod">Mod</option>
+            </select><br><br>
+    
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if result is not None %}
+            <h2>The result is: {{ result }}</h2>
+        {% endif %}
+        
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

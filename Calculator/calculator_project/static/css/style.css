@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.maincontainer {
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 100px 100px 100px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.subcontainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.maincontainer h1 {
+    font-family: 'lemon';
+}
+
+.maincontainer label {
+    font-family: 'times';
+    flex: 1;
+    text-align: left;
+}
+
+.maincontainer input {
+    border-radius: 20px;
+    padding: 10px;
+    width: 40%;
+    font-family: 'times';
+    color: #000000;
+    flex: 1;
+}
+
+.maincontainer button {
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'times';
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+.maincontainer select {
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'times';
+}
+
+.maincontainer button:hover {
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+.maincontainer h2 {
+    font-family: 'times';
+}
